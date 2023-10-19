@@ -1,23 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from 'react';
+import { BrowserRouter as Router, Route,  Routes } from 'react-router-dom';
+import { CreatorAuthContext } from './utils/CreatorAuthContext';
+import CreatorLogin from './components/pages/CreatorLogin';
+import CreatorSignUp from './components/pages/CreatorSignUp';
+import CreatorSidebar from './components/CreatorSidebar';
+import DiscoverCampaigns from './components/pages/DiscoverCampaigns';
 
 function App() {
+
+  const { creatorId } = useContext(CreatorAuthContext);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+
+        <div className="flex">
+          {
+            creatorId == null ? 
+            <Routes>
+                <Route path='/creator_login' element={
+                  <>
+                  <CreatorLogin />
+                  </>
+                }>
+                </Route>
+
+                <Route path='/creator_signup' element={
+                  <>
+                  <CreatorSignUp />
+                  </>
+                }>
+                </Route>
+
+                <Route path='/*' element={
+                  <>
+                  <CreatorLogin />
+                  </>
+                }>
+                </Route>
+
+            </Routes>
+
+            :
+            <Routes>
+
+                <Route path="/discover_campaigns" element={
+                  <>
+                  <CreatorSidebar />
+                  <DiscoverCampaigns />
+                  </>
+                }>
+                </Route>
+
+                
+              
+            </Routes>
+          }
+          </div>
+        </Router>
     </div>
   );
 }
