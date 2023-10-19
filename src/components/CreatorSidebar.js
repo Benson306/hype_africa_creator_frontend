@@ -28,7 +28,7 @@ function CreatorSidebar() {
   return (
     // <div className='min-h-screen bg-gradient-to-l from-slate-800 via-slate-800 to-slate-900' style={{ width: isOpen ? '320px': '50px', transition: 'width 0.5s ease'}} >
     <div
-      className={`min-h-screen shadow-md bg-neutral-900 ${
+      className={`min-h-screen shadow-md  bg-gradient-to-l from-zinc-900 via-zinc-800 to-slate-800 ${
         isOpen ? 'w-64' : 'w-16'
       } transition-width duration-500 ease-in-out fixed top-0 left-0 z-100 overflow-hidden`}
     >
@@ -63,7 +63,7 @@ function CreatorSidebar() {
                 <div style={{display: isOpen ? 'block' : 'none'}}>Wallet</div> 
             </Link>
 
-            <button onClick={(e)=> handleLogout(e)} className='absolute bottom-10 left-0 p-4 flex  align-middle gap-4 hover:text-blue-400 bg-black text-red-700 w-full justify-center place-items-center' >
+            <button onClick={(e)=> handleLogout(e)} className='absolute bottom-10 left-0 p-4 flex  align-middle gap-4 hover:text-red-700 bg-black text-blue-400 w-full justify-center place-items-center' >
               <LogoutIcon />
               <div className='text-lg' style={{display: isOpen ? 'block' : 'none'}}>Sign Out</div> 
             </button>
