@@ -12,7 +12,7 @@ function DiscoverCampaigns() {
   const [data, setData] = useState([]);
 
   useEffect(()=>{
-      fetch(`${process.env.REACT_APP_API_URL}/get_campaigns/all`)
+      fetch(`${process.env.REACT_APP_API_URL}/get_campaigns/complete`)
       .then(response => response.json())
       .then(result => {
           setData(result);
