@@ -61,7 +61,7 @@ function SelectIndustries() {
         .then((data)=> data.json())
         .then(data => {
             if(data == 'success'){
-                navigate("/discover_campaigns")
+                navigate("/add_socials")
             }else{
                 toast.error('Failed. Server Error', {
                     position: "top-right",
