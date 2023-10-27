@@ -15,7 +15,7 @@ function SimpleNavigationBar() {
             Hype Africa
         </div>
 
-        <button onClick={(e)=> {e.preventDefault(); handleSignOut()}} className='border-2 border-red-500 text-white text-sm p-1 lg:p-3 rounded-lg'>
+        <button onClick={(e)=> {e.preventDefault(); handleSignOut()}} className='border-2 border-red-500 text-white text-sm p-1 lg:p-3 rounded-lg hover:bg-red-500 hover:text-white'>
             Sign Out
         </button>
       </div>
