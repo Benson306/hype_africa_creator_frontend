@@ -6,7 +6,7 @@ function AddSocials() {
     const navigate = useNavigate('');
 
     const handleClick = (type) => {
-        navigate('/discover_campaigns')
+        navigate('/pending_approval')
     }
 
   return (

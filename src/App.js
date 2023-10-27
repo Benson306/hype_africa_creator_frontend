@@ -8,6 +8,7 @@ import DiscoverCampaigns from './components/pages/DiscoverCampaigns';
 import SelectIndustries from './components/pages/SelectIndustries';
 import SimpleNavigationBar from './components/SimpleNavigationBar';
 import AddSocials from './components/pages/AddSocials';
+import PendingApproval from './components/pages/PendingApproval';
 
 function App() {
 
@@ -57,6 +58,13 @@ function App() {
                 <Route path="/add_socials" element={
                   <>
                   <AddSocials />
+                  </>
+                }>
+                </Route>
+
+                <Route path="/pending_approval" element={
+                  <>
+                  <PendingApproval />
                   </>
                 }>
                 </Route>
