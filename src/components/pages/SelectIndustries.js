@@ -3,6 +3,7 @@ import { CreatorAuthContext } from '../../utils/CreatorAuthContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
+import SimpleNavigationBar from '../SimpleNavigationBar';
 
 function SelectIndustries() {
 
@@ -78,6 +79,7 @@ function SelectIndustries() {
 
   return (
     <div className='w-full min-h-screen bg-black'>
+        <SimpleNavigationBar />
 
         <div className='mt-52 mx-2 lg:mx-20'>
             <form className='mx-2 lg:mx-32'>
