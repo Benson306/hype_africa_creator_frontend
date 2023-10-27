@@ -5,6 +5,7 @@ import CreatorLogin from './components/pages/CreatorLogin';
 import CreatorSignUp from './components/pages/CreatorSignUp';
 import CreatorSidebar from './components/CreatorSidebar';
 import DiscoverCampaigns from './components/pages/DiscoverCampaigns';
+import SelectIndustries from './components/pages/SelectIndustries';
 
 function App() {
 
@@ -44,7 +45,23 @@ function App() {
             :
             <Routes>
 
+                <Route path="/select_industry" element={
+                  <>
+                  <SelectIndustries />
+                  </>
+                }>
+                </Route>
+
+
                 <Route path="/discover_campaigns" element={
+                  <>
+                  <CreatorSidebar />
+                  <DiscoverCampaigns />
+                  </>
+                }>
+                </Route>
+
+                <Route path="/*" element={
                   <>
                   <CreatorSidebar />
                   <DiscoverCampaigns />

@@ -86,10 +86,20 @@ function CreatorLogin() {
             theme: "colored"
             });
 
-          setTimeout(() => {
+            console.log(response.industryCount);
+          
+          if(response.industryCount > 0){
+            setTimeout(() => {
               addCreatorId(response.uid);
               navigate('/discover_campaigns');
             }, 2000);
+          }else{
+            setTimeout(() => {
+              addCreatorId(response.uid);
+              navigate('/select_industry');
+            }, 2000);
+          }
+          
         }else if(response.status == "failed"){
           
             toast.error('Authentication Failed', {
