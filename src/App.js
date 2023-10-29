@@ -9,6 +9,7 @@ import SelectIndustries from './components/pages/SelectIndustries';
 import SimpleNavigationBar from './components/SimpleNavigationBar';
 import AddSocials from './components/pages/AddSocials';
 import PendingApproval from './components/pages/PendingApproval';
+import InstagramSocials from './components/pages/InstagramSocials';
 
 function App() {
 
@@ -58,6 +59,13 @@ function App() {
                 <Route path="/add_socials" element={
                   <>
                   <AddSocials />
+                  </>
+                }>
+                </Route>
+
+                <Route path="/instagram_social/*" element={
+                  <>
+                  <InstagramSocials />
                   </>
                 }>
                 </Route>
