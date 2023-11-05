@@ -60,8 +60,12 @@ function SelectIndustries() {
         })
         .then((data)=> data.json())
         .then(data => {
-            if(data == 'success'){
-                navigate("/add_socials")
+            if(data.status == 'success'){
+                if(data.creatorType == 'content'){
+                    navigate("/add_socials")
+                }else if(data.creatorType == 'influencer'){
+                    navigate("/add_media")
+                }
             }else{
                 toast.error('Failed. Server Error', {
                     position: "top-right",

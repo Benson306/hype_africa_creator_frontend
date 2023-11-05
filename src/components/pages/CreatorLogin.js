@@ -85,19 +85,26 @@ function CreatorLogin() {
             progress: undefined,
             theme: "colored"
             });
-
-            console.log(response.industryCount);
           
           if(response.industryCount > 0){
             setTimeout(() => {
               addCreatorId(response.uid);
-              navigate('/discover_campaigns');
-            }, 2000);
+
+              if(response.isComplete){
+                navigate('/discover_campaigns');
+              }else{
+                if(response.creatorType == 'influencer'){
+                  navigate('/add_socials');
+                }else if(response.creatorType == 'content'){
+                  navigate('/add_media');
+                }
+              } 
+            }, 1000);
           }else{
             setTimeout(() => {
               addCreatorId(response.uid);
               navigate('/select_industry');
-            }, 2000);
+            }, 1000);
           }
           
         }else if(response.status == "failed"){

@@ -10,6 +10,7 @@ import SimpleNavigationBar from './components/SimpleNavigationBar';
 import AddSocials from './components/pages/AddSocials';
 import PendingApproval from './components/pages/PendingApproval';
 import InstagramSocials from './components/pages/InstagramSocials';
+import AddMedia from './components/pages/AddMedia';
 
 function App() {
 
@@ -59,6 +60,13 @@ function App() {
                 <Route path="/add_socials" element={
                   <>
                   <AddSocials />
+                  </>
+                }>
+                </Route>
+
+                <Route path="/add_media" element={
+                  <>
+                  <AddMedia />
                   </>
                 }>
                 </Route>

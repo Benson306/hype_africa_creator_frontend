@@ -11,6 +11,7 @@ function CreatorSignUp() {
     const [countryCode, setCountryCode] = useState("+254");
     const [phoneNumber, setPhoneNumber] = useState(null);
     const [password, setPassword] = useState(null);
+    const [campaignType, setCampaignType] = useState(null);
 
     const navigate = useNavigate();
 
@@ -24,7 +25,7 @@ function CreatorSignUp() {
 
         const phonePattern = /^\d{9}$/;
 
-        if(email == null || firstName == null || lastName == null || phoneNumber == null || password == null){
+        if(email == null || firstName == null || lastName == null || phoneNumber == null || password == null || campaignType == null){
             toast.error('All Fields Must Be Filled', {
                 position: "top-right",
                 autoClose: 5000,
@@ -91,7 +92,8 @@ function CreatorSignUp() {
                 firstName,
                 lastName,
                 countryCode,
-                phoneNumber
+                phoneNumber,
+                creatorType: campaignType
             })
         })
         .then(response => response.json())
@@ -178,6 +180,13 @@ function CreatorSignUp() {
           </div>
 
           <div className='text-sm mb-3 text-red-900 mx-auto'>Phone number is 9 characters long and starts with a 7 or 1 e.g 707 423 443</div>
+            
+            <label className='text-black mt-2 mb-4'>What type of campaigns are you interested in?</label>
+          <select className='border-2 border-gray-500 w-full p-4 rounded mt-2 bg-white' onChange={e => setCampaignType(e.target.value)}>
+                <option value=""></option>
+                <option value="influencer">Influencer Campaigns</option>
+                <option value="content">Content Campaigns</option>
+            </select>
 
           <input type='password' className='border-2 border-gray-500 w-full p-4 rounded mt-3 mb-2' onChange={e => setPassword(e.target.value)} placeholder='Password' required/>
 
