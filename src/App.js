@@ -11,6 +11,7 @@ import AddSocials from './components/pages/AddSocials';
 import PendingApproval from './components/pages/PendingApproval';
 import InstagramSocials from './components/pages/InstagramSocials';
 import AddMedia from './components/pages/AddMedia';
+import FailedApproval from './components/pages/FailedApproval';
 
 function App() {
 
@@ -81,6 +82,13 @@ function App() {
                 <Route path="/pending_approval" element={
                   <>
                   <PendingApproval />
+                  </>
+                }>
+                </Route>
+
+                <Route path="/failed_approval" element={
+                  <>
+                  <FailedApproval />
                   </>
                 }>
                 </Route>

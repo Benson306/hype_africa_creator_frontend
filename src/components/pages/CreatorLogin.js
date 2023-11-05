@@ -90,8 +90,16 @@ function CreatorLogin() {
             setTimeout(() => {
               addCreatorId(response.uid);
 
+              console.log(response);
+
               if(response.isComplete){
-                navigate('/discover_campaigns');
+                if(response.isApproved == 1){
+                  navigate('/discover_campaigns');
+                }else if(response.isApproved == 0){
+                  navigate('/pending_approval');
+                }else if(response.isApproved == 2){
+                  navigate('/failed_approval');
+                }
               }else{
                 if(response.creatorType == 'influencer'){
                   navigate('/add_socials');
