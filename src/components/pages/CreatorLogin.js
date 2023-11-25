@@ -87,32 +87,36 @@ function CreatorLogin() {
             });
           
           if(response.industryCount > 0){
-            setTimeout(() => {
-              addCreatorId(response.uid);
+                setTimeout(() => {
+                  addCreatorId(response.uid);
 
-              console.log(response);
+                  if(response.averageEarning > 1000){
+                      if(response.isComplete){
+                        if(response.isApproved == 1){
+                          navigate('/discover_campaigns');
+                        }else if(response.isApproved == 0){
+                          navigate('/pending_approval');
+                        }else if(response.isApproved == 2){
+                          navigate('/failed_approval');
+                        }
+                      }else{
+                        if(response.creatorType == 'influencer'){
+                          navigate('/add_socials');
+                        }else if(response.creatorType == 'content'){
+                          navigate('/add_media');
+                        }
+                      } 
+                  }else{
+                    navigate('/set_earning');
+                  }
 
-              if(response.isComplete){
-                if(response.isApproved == 1){
-                  navigate('/discover_campaigns');
-                }else if(response.isApproved == 0){
-                  navigate('/pending_approval');
-                }else if(response.isApproved == 2){
-                  navigate('/failed_approval');
-                }
-              }else{
-                if(response.creatorType == 'influencer'){
-                  navigate('/add_socials');
-                }else if(response.creatorType == 'content'){
-                  navigate('/add_media');
-                }
-              } 
-            }, 1000);
+                  
+                }, 1000);
           }else{
-            setTimeout(() => {
-              addCreatorId(response.uid);
-              navigate('/select_industry');
-            }, 1000);
+              setTimeout(() => {
+                addCreatorId(response.uid);
+                navigate('/select_industry');
+              }, 1000);
           }
           
         }else if(response.status == "failed"){

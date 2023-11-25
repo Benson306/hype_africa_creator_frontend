@@ -12,6 +12,7 @@ import PendingApproval from './components/pages/PendingApproval';
 import InstagramSocials from './components/pages/InstagramSocials';
 import AddMedia from './components/pages/AddMedia';
 import FailedApproval from './components/pages/FailedApproval';
+import SetAverageEarning from './components/pages/SetAverageEarning';
 
 function App() {
 
@@ -58,6 +59,13 @@ function App() {
                 }>
                 </Route>
 
+                <Route path="/set_earning" element={
+                  <>
+                  <SetAverageEarning />
+                  </>
+                }>
+                </Route>
+
                 <Route path="/add_socials" element={
                   <>
                   <AddSocials />
@@ -72,12 +80,12 @@ function App() {
                 }>
                 </Route>
 
-                <Route path="/instagram_social/*" element={
+                {/* <Route path="/instagram_social/*" element={
                   <>
                   <InstagramSocials />
                   </>
                 }>
-                </Route>
+                </Route> */}
 
                 <Route path="/pending_approval" element={
                   <>

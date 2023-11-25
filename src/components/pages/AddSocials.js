@@ -26,15 +26,7 @@ function AddSocials() {
     },[])
 
     useEffect(()=>{
-        if(instagram && facebook){
-            setProceed(true);
-        }
-
-        if(instagram && tiktok){
-            setProceed(true)
-        }
-
-        if(facebook && tiktok){
+        if(instagram || facebook || tiktok){
             setProceed(true);
         }
 
@@ -42,10 +34,6 @@ function AddSocials() {
 
     const handleClick = (type) => {
         //navigate('/pending_approval')
-
-        
-
-        
     }
 
   return (
@@ -53,7 +41,7 @@ function AddSocials() {
         <SimpleNavigationBar />
 
         <div className='mt-16 lg:mt-10 mx-2 lg:mx-20 text-white text-center flex justify-center text-2xl'>
-                Link At least 2 of Your Social Media Accounts
+                Link Your Instagram Account
         </div>
 
         <div className='mt-5 mx-2 lg:mx-20 flex flex-wrap justify-center mb-10'>
@@ -86,7 +74,7 @@ function AddSocials() {
             </div>
             }
 
-            <div className='bg-zinc-950 border border-gray-900 shadow-2xl rounded-2xl p-10 m-2 text-black'>
+            {/* <div className='bg-zinc-950 border border-gray-900 shadow-2xl rounded-2xl p-10 m-2 text-black'>
                 <div className='flex justify-center'>
                     <img src={require('../../images/tiktok.png')} className='w-36 lg:w-52' />
                 </div>
@@ -108,7 +96,7 @@ function AddSocials() {
                 }} className='mt-4 bg-blue-600 text-white hover:bg-blue-400 hover:text-black p-2 text-center mx-auto w-full rounded-xl'>
                     Link Account
                 </button>
-            </div>
+            </div> */}
 
         </div>
 

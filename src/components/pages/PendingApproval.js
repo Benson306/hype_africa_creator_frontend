@@ -23,7 +23,6 @@ function PendingApproval() {
                 <img src={require('../../images/file.gif')} className='w-36 lg:w-52 rounded-xl' />
             </div>
 
-
         </div>
     </div>
   )

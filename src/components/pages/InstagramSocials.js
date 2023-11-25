@@ -17,7 +17,7 @@ export default function InstagramSocials() {
         .then( response => response.json())
         .then(response=> {
             if(response == 'success'){
-                navigate('/add_socials');
+                navigate('/discover_campaigns');
             }
         })
 
