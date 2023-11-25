@@ -80,7 +80,7 @@ function SetAverageEarning() {
                 <ToastContainer />
 
                 <label className='text-white text-lg lg:text-xl mb-5 lg:mb-2 lg:flex lg:text-center'>
-                    Set Your expexted average earning per campaign:
+                    Set your expected average earning per campaign:
                 </label>
 
                 <div class="w-full md:w-1/3 mb-6 mt-3">
