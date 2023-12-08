@@ -28,7 +28,7 @@ function CreatorSidebar() {
   return (
     // <div className='min-h-screen bg-gradient-to-l from-slate-800 via-slate-800 to-slate-900' style={{ width: isOpen ? '320px': '50px', transition: 'width 0.5s ease'}} >
     <div
-      className={`min-h-screen shadow-md  bg-gradient-to-l from-slate-900 to-slate-800 ${
+      className={`min-h-screen shadow-md  bg-zinc-900 ${
         isOpen ? 'w-64' : 'w-16'
       } transition-width duration-500 ease-in-out fixed top-0 left-0 z-100 overflow-hidden`}
     >
@@ -38,8 +38,7 @@ function CreatorSidebar() {
             
             </Link> }
 
-        <MenuIcon htmlColor="#fff" style={{float: 'right', marginRight: 22, marginTop: 50, marginBottom: 20}} onClick={handleSidebar}/>
-
+        <MenuIcon htmlColor="#fff" sx={{ fontSize: 22 }} style={{float: 'right', marginRight: 22, marginTop: 50, marginBottom: 20}} onClick={handleSidebar}/>
         {/* <div className="mt-28" style={{marginLeft: isOpen ? '30px' : '10px', marginRight:'10px'}}> */}
         <div
         className={`mt-28 ml-4 lg:ml-${isOpen ? '12' : '8'} `}
@@ -47,24 +46,24 @@ function CreatorSidebar() {
             
 
             <Link onClick={handleSidebar} className="flex text-white py-2 align-middle gap-4 hover:text-blue-400 mb-3 text-sm" to={"/discover_campaigns"}>
-                <CampaignIcon />
+                <CampaignIcon sx={{ fontSize: 22 }} />
                 <div style={{display: isOpen ? 'block' : 'none'}}>Discover Campaigns</div> 
             </Link>
             
 
             <Link onClick={handleSidebar}  className="flex text-white py-2 align-middle gap-4 hover:text-blue-400 mb-3 text-sm" to={"/discover_campaigns"}>
-                <BrandingWatermarkIcon />
+                <BrandingWatermarkIcon sx={{ fontSize: 20 }} />
                 <div style={{display: isOpen ? 'block' : 'none'}}>Invoices</div>
             </Link>
             
 
             <Link onClick={handleSidebar}  className="flex text-white py-2 align-middle gap-4 hover:text-blue-400 mb-3 text-sm" to={"/discover_campaigns"}>
-                <PaidIcon />
+                <PaidIcon sx={{ fontSize: 22 }} />
                 <div style={{display: isOpen ? 'block' : 'none'}}>Wallet</div> 
             </Link>
 
-            <button onClick={(e)=> handleLogout(e)} className='absolute bottom-10 left-0 p-4 flex  align-middle gap-4 hover:text-red-700  text-red-400 w-full justify-center place-items-center' >
-              <LogoutIcon />
+            <button onClick={(e)=> handleLogout(e)} className='absolute bottom-10 left-0 p-4 flex  align-middle gap-4 hover:text-blue-700  text-blue-400 w-full justify-center place-items-center' >
+              <LogoutIcon  sx={{ fontSize: 22 }} />
               <div className='text-sm' style={{display: isOpen ? 'block' : 'none'}}>Sign Out</div> 
             </button>
             
