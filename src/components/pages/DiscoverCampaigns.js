@@ -12,7 +12,7 @@ function DiscoverCampaigns() {
   const [data, setData] = useState([]);
 
   useEffect(()=>{
-      fetch(`${process.env.REACT_APP_API_URL}/get_campaigns/complete`)
+      fetch(`${process.env.REACT_APP_API_URL}/get_all_campaigns`)
       .then(response => response.json())
       .then(result => {
           setData(result);
@@ -26,7 +26,7 @@ function DiscoverCampaigns() {
     <div className='w-full min-h-screen bg-black'>
       <div className='p-2 ml-16 lg:ml-20'>
 
-        <h1 className='text-sm mb-3 p-3 uppercase font-bold text-white'>Discover Campaigns</h1>
+        <h1 className='text-xs mb-3 p-3 uppercase font-bold text-white'>Discover Campaigns</h1>
 
           <div className='flex flex-wrap gap-4'>
             { 
@@ -53,7 +53,7 @@ function DiscoverCampaigns() {
                                     <br />
                                     <div class="flex items-center justify-between align-middle">
                                         <span class="text-2xl font-bold text-white ">$ {item.budget}</span>
-                                        <Link to={`#`} class="text-black bg-blue-300 hover:bg-blue-400  font-bold rounded-2xl px-2 py-2.5 text-center flex align-middle text-lg gap-2">Pitch <SendIcon /></Link>
+                                        <Link to={`#`} class="text-black bg-red-300 hover:bg-red-400  font-bold rounded-2xl px-2 py-2.5 text-center flex align-middle text-lg gap-2">Pitch <SendIcon /></Link>
                                     </div>
                                 </div>
                             </div>

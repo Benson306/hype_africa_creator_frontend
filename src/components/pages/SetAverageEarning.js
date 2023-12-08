@@ -27,7 +27,7 @@ function SetAverageEarning() {
         if(rangeValue < 999){
             toast.error('Average earning should be more than 1000 Ksh', {
                 position: "top-right",
-                autoClose: 5000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -59,7 +59,7 @@ function SetAverageEarning() {
             }else{
                 toast.error('Failed. Server Error', {
                     position: "top-right",
-                    autoClose: 5000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -79,7 +79,7 @@ function SetAverageEarning() {
             <form className='mx-2 lg:mx-32'>
                 <ToastContainer />
 
-                <label className='text-white text-lg lg:text-xl mb-5 lg:mb-2 lg:flex lg:text-center'>
+                <label className='text-white text-lg lg:text-lg mb-5 lg:mb-2 lg:flex lg:text-center'>
                     Set your expected average earning per campaign:
                 </label>
 
@@ -95,7 +95,7 @@ function SetAverageEarning() {
                         onChange={handleRangeChange}
                     />
 
-                    <p className='text-white mt-10'>Amount: Ksh.<b> {rangeValue}</b></p>
+                    <p className='text-white mt-10 text-sm'>Amount: Ksh.<b> {rangeValue}</b></p>
                 </div>
             
 
@@ -104,7 +104,7 @@ function SetAverageEarning() {
                     e.preventDefault();
                     handleSubmit()   
                     }} 
-                    className='mr-10 bg-blue-700 text-white rounded-xl shadow-lg hover:bg-blue-300 hover:text-black p-2 w-32 lg:w-20'>
+                    className='mr-10 bg-blue-700 text-white text-sm rounded-xl shadow-lg hover:bg-blue-300 hover:text-black p-2 w-32 lg:w-20'>
                         Next
                     </button>
 

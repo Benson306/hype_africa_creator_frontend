@@ -80,12 +80,12 @@ function App() {
                 }>
                 </Route>
 
-                {/* <Route path="/instagram_social/*" element={
+                <Route path="/instagram_social/*" element={
                   <>
                   <InstagramSocials />
                   </>
                 }>
-                </Route> */}
+                </Route>
 
                 <Route path="/pending_approval" element={
                   <>

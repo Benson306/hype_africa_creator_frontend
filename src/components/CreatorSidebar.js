@@ -33,8 +33,8 @@ function CreatorSidebar() {
       } transition-width duration-500 ease-in-out fixed top-0 left-0 z-100 overflow-hidden`}
     >
         { isOpen && <Link onClick={handleSidebar} to={"/discover_campaigns"} >
-            <h1 className='text-white text-2xl text-center mt-5'>HypeAfrica</h1>
-            <h2  className='text-gray-300 text-sm text-center mt-2'>Creator Dashboard</h2>
+            <h1 className='text-white text-xl text-center mt-5'>Neza</h1>
+            <h2  className='text-gray-300 text-xs text-center mt-2'>Creator Dashboard</h2>
             
             </Link> }
 
@@ -46,26 +46,26 @@ function CreatorSidebar() {
       >
             
 
-            <Link onClick={handleSidebar} className="flex text-white py-2 align-middle gap-4 hover:text-blue-400 mb-5" to={"/discover_campaigns"}>
+            <Link onClick={handleSidebar} className="flex text-white py-2 align-middle gap-4 hover:text-red-400 mb-3 text-sm" to={"/discover_campaigns"}>
                 <CampaignIcon />
                 <div style={{display: isOpen ? 'block' : 'none'}}>Discover Campaigns</div> 
             </Link>
             
 
-            <Link onClick={handleSidebar}  className="flex text-white py-2 align-middle gap-4 hover:text-blue-400 mb-5" to={"/discover_campaigns"}>
+            <Link onClick={handleSidebar}  className="flex text-white py-2 align-middle gap-4 hover:text-red-400 mb-3 text-sm" to={"/discover_campaigns"}>
                 <BrandingWatermarkIcon />
                 <div style={{display: isOpen ? 'block' : 'none'}}>Invoices</div>
             </Link>
             
 
-            <Link onClick={handleSidebar}  className="flex text-white py-2 align-middle gap-4 hover:text-blue-400 mb-5" to={"/discover_campaigns"}>
+            <Link onClick={handleSidebar}  className="flex text-white py-2 align-middle gap-4 hover:text-red-400 mb-3 text-sm" to={"/discover_campaigns"}>
                 <PaidIcon />
                 <div style={{display: isOpen ? 'block' : 'none'}}>Wallet</div> 
             </Link>
 
-            <button onClick={(e)=> handleLogout(e)} className='absolute bottom-10 left-0 p-4 flex  align-middle gap-4 hover:text-red-700 bg-black text-blue-400 w-full justify-center place-items-center' >
+            <button onClick={(e)=> handleLogout(e)} className='absolute bottom-10 left-0 p-4 flex  align-middle gap-4 hover:text-red-700 bg-black text-red-400 w-full justify-center place-items-center' >
               <LogoutIcon />
-              <div className='text-lg' style={{display: isOpen ? 'block' : 'none'}}>Sign Out</div> 
+              <div className='text-sm' style={{display: isOpen ? 'block' : 'none'}}>Sign Out</div> 
             </button>
             
         </div>

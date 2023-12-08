@@ -40,19 +40,20 @@ function AddSocials() {
     <div className='w-full min-h-screen bg-black'>
         <SimpleNavigationBar />
 
-        <div className='mt-16 lg:mt-10 mx-2 lg:mx-20 text-white text-center flex justify-center text-2xl'>
+        <div className='mt-16 lg:mt-20 mx-2 lg:mx-20 text-white text-center flex justify-center text-lg'>
                 Link Your Instagram Account
         </div>
 
         <div className='mt-5 mx-2 lg:mx-20 flex flex-wrap justify-center mb-10'>
             { 
-            !instagram && <div className='bg-zinc-950 border border-gray-900 shadow-2xl rounded-2xl p-10 m-2 text-black'>
+            !instagram && <div className='bg-zinc-950 border border-gray-900 shadow-2xl rounded-2xl p-5 m-2 text-black'>
                 <div className='flex justify-center'>
-                    <img src={require('../../images/instagram.png')} className='w-36 lg:w-52' />
+                    <img src={require('../../images/instagram.png')} className='w-28 lg:w-44' />
                 </div>
-                <div className='mt-4 bg-blue-600 text-white hover:bg-blue-400 hover:text-black p-2 text-center mx-auto w-full rounded-xl'>
+                <div className='mt-4 bg-blue-600 text-white text-sm hover:bg-blue-400 hover:text-black p-2 text-center mx-auto w-full rounded-xl'>
                     <Link 
-                        target={"_blank"} 
+                        className='text-sm'
+                        target={"_blank"}
                         to={`https://api.instagram.com/oauth/authorize?client_id=${process.env.REACT_APP_INSTAGRAM_APP_ID}&redirect_uri=${process.env.REACT_APP_INSTAGRAM_APP_REDIRECT_URI}&scope=user_profile&response_type=code`}
                     >    
                         Link Account
@@ -63,11 +64,11 @@ function AddSocials() {
             }
 
             { 
-            instagram && <div className='bg-zinc-950 border border-gray-900 shadow-2xl rounded-2xl p-10 m-2 text-black'>
+            instagram && <div className='bg-zinc-950 border border-gray-900 shadow-2xl rounded-2xl p-5 m-2 text-black'>
                 <div className='flex justify-center'>
-                    <img src={require('../../images/instagram.png')} className='w-36 lg:w-52' />
+                    <img src={require('../../images/instagram.png')} className='w-28 lg:w-44' />
                 </div>
-                <div className='flex align-middle gap-2 mt-4 border-2 border-green-600 text-white hover:border-green-400 hover:text-green-400 p-2 text-center mx-auto w-full rounded-xl'>
+                <div className='text-sm flex align-middle gap-2 mt-4 border-2 border-green-600 text-white hover:border-green-400 hover:text-green-400 p-2 text-center mx-auto w-full rounded-xl'>
                         <CheckCircleIcon color='success' /> Instagram Account is Linked
                 </div>
                 

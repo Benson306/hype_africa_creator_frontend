@@ -37,7 +37,7 @@ function CreatorLogin() {
       if(!emailPattern.test(email)){
         toast.error('Email must be in the correct format', {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -51,7 +51,7 @@ function CreatorLogin() {
     if(!passwordPattern.test(password)){
         toast.error('Password must be at least 6 characters long with 1 digit in it', {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -77,7 +77,7 @@ function CreatorLogin() {
         if(response.status == "success"){
           toast.success('Success!', {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -148,21 +148,21 @@ function CreatorLogin() {
   }
   return (
     <div className='w-full min-h-screen bg-neutral-300'>
-      <div className='lg:w-2/6 mx-2 lg:mx-auto bg-white shadow-2xl items-center p-4 mt-32 lg:mt-48 rounded'>
+      <div className='lg:w-2/6 mx-2 lg:mx-auto bg-white shadow-2xl items-center p-4 mt-32 lg:mt-32 rounded'>
         <ToastContainer />
-        <div className='text-center text-lg font-bold'>Hype Africa</div>
-        <div className='text-center text-2xl mt-3 '>Welcome Back!</div>
+        <div className='text-center text-lg font-bold'>Neza</div>
+        <div className='text-center text-xl mt-3 '>Welcome Back!</div>
 
-        <form className='mt-10 mx-6'>
-          <input type='text' className='border-2 border-gray-500 w-full p-4 rounded' onChange={e => setEmail(e.target.value)} placeholder='Email Address' required/>
-          <input type='password' className='border-2 border-gray-500 w-full p-4 rounded mt-5 mb-5' onChange={e => setPassword(e.target.value)} placeholder='Password' required/>
+        <form className='mt-5 mx-6'>
+          <input type='text' className='border-2 border-gray-500 w-full p-3 text-xs rounded' onChange={e => setEmail(e.target.value)} placeholder='Email Address' required/>
+          <input type='password' className='border-2 border-gray-500 w-full p-3 text-xs rounded mt-5 mb-3' onChange={e => setPassword(e.target.value)} placeholder='Password' required/>
 
-          <Link to={"#"} className="text-sky-900 underline">Forgot Password?</Link>
+          <Link to={"#"} className="text-sky-900 text-xs underline">Forgot Password?</Link>
 
-          <button onClick={e => handleSubmit(e)} className='w-full bg-black text-white text-center text-xl p-5 mt-5 mb-5 rounded'>
+          <button onClick={e => handleSubmit(e)} className='w-full bg-black text-white text-center text-xl p-2 mt-3 mb-5 rounded'>
             Continue
           </button>
-        <div className='flex gap-2 text-lg mb-10'>
+        <div className='flex gap-2 text-xs mb-10'>
           <span className='font-bold'>Don't Have an Account?</span>
           <Link to={"/creator_signup"} className="text-sky-900 underline">Sign Up</Link>
         </div>

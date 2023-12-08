@@ -9,13 +9,13 @@ function SimpleNavigationBar() {
         logoutCreator();
     }
   return (
-    <div className='bg-neutral-900 shadow-lg p-4'>
+    <div className='bg-neutral-900 shadow-lg p-2'>
       <div className='flex align-middle justify-between mx-2 lg:mx-10'>
-        <div className='text-white text-lg lg:text-2xl'>
-            Hype Africa
+        <div className='text-white text-md lg:text-xl'>
+            Neza
         </div>
 
-        <button onClick={(e)=> {e.preventDefault(); handleSignOut()}} className='border-2 border-red-500 text-white text-sm p-1 lg:p-3 rounded-lg hover:bg-red-500 hover:text-white'>
+        <button onClick={(e)=> {e.preventDefault(); handleSignOut()}} className='text-red-500 text-sm p-1 lg:p-2 rounded-lg hover:bg-red-500 hover:text-white'>
             Sign Out
         </button>
       </div>

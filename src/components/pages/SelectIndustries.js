@@ -37,7 +37,7 @@ function SelectIndustries() {
         if(industries.length < 1){
             toast.error('Select at least 1 industry', {
                 position: "top-right",
-                autoClose: 5000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -65,7 +65,7 @@ function SelectIndustries() {
             }else{
                 toast.error('Failed. Server Error', {
                     position: "top-right",
-                    autoClose: 5000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -85,11 +85,11 @@ function SelectIndustries() {
             <form className='mx-2 lg:mx-32'>
                 <ToastContainer />
 
-                <label className='text-white text-lg lg:text-xl mb-5 lg:mb-2 lg:flex lg:text-center'>
+                <label className='text-white text-sm mb-5 lg:mb-2 lg:flex lg:text-center'>
                     Select Industries You Want To Create Content For:
                 </label>
-                <div class="relative mt-8">
-                    <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" onChange={e => setNewIndustry(e.target.value)}>
+                <div class="relative mt-3">
+                    <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 text-sm px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" onChange={e => setNewIndustry(e.target.value)}>
                         <option value="">Select Industry .....</option>
                         <option value="Arts and Entertainment">Arts and Entertainment</option>
                         <option value="Books and Literature">Books and Literature</option>
@@ -110,14 +110,14 @@ function SelectIndustries() {
             <div>
             {
                 industries.length > 0 &&
-                <div className='flex flex-wrap mt-10 mx-2 lg:mx-32'>
+                <div className='flex flex-wrap mt-5 mx-2 lg:mx-28'>
                     {
                         industries.map((industry, index) => (
-                            <div className='text-white p-2 border-2 border-white rounded-xl mx-2 my-2 flex gap-4  items-center place-content-center text-sm'>
+                            <div className='text-white p-2 border border-white rounded-xl mx-2 my-2 flex gap-4  items-center place-content-center text-sm'>
                                 <div>
                                  {industry} 
                                 </div>
-                                <button onClick={(e)=> deleteIndustryByIndex(e, index)} className='text-red-800 font-bold text-2xl'>
+                                <button onClick={(e)=> deleteIndustryByIndex(e, index)} className='text-red-500 text-sm'>
                                     X
                                 </button>
                             
@@ -134,7 +134,7 @@ function SelectIndustries() {
                  e.preventDefault();
                  handleSubmit()   
                 }} 
-                className='mr-10 bg-blue-700 text-white rounded-xl shadow-lg hover:bg-blue-300 hover:text-black p-2 w-32 lg:w-20'>
+                className='mr-10 bg-blue-700 text-white text-xs rounded-xl shadow-lg hover:bg-blue-300 hover:text-black p-2 w-32 lg:w-20'>
                     Next
                 </button>
 

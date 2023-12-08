@@ -26,13 +26,13 @@ export default function InstagramSocials() {
   return (
     <div className='w-full min-h-screen bg-black'>
         <SimpleNavigationBar />
-        <div className='mt-20 mx-auto'>
+        <div className='mt-32 mx-auto'>
 
         <div className='flex justify-center'>
-            <img src={require('../../images/instagram.png')} className='w-36 lg:w-52' />
+            <img src={require('../../images/instagram.png')} className='w-28 lg:w-44' />
         </div>
 
-        <div className='text-white capitalize text-center mt-5'>
+        <div className='text-white capitalize text-center text-sm mt-5'>
             instagram Account Has Been Authenticated
         </div>
         <div className='flex justify-center'>
