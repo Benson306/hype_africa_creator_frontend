@@ -5,17 +5,17 @@ function PendingApproval() {
   return (
     <div className='w-full min-h-screen bg-black'>
         <SimpleNavigationBar />
-        <div className='mt-32 mx-2 lg:mx-20 bg-zinc-950 border border-gray-900 shadow-2xl p-5'>
+        <div className='mt-24 mx-2 lg:mx-20 bg-zinc-950 border border-gray-900 shadow-2xl p-5'>
 
-          <div className='text-3xl text-center my-2 font-serif tracking-wider text-blue-500'>
+          <div className='text-xl text-center my-2 font-serif tracking-wider text-blue-500'>
             You are almost there!
           </div>
 
-            <div className='text-lg text-center text-white my-2 mb-5'>
+            <div className='text-md text-center text-white my-2 mb-5'>
               Your Have Succesfully Completed Account Creation.
             </div>
 
-            <div className='text-xl text-center text-white my-2'>
+            <div className='text-sm text-center text-white my-2'>
               Expect approval of your account within 24 hours
             </div>
 

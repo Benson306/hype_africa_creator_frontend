@@ -63,7 +63,7 @@ const closeModal = () => {
     if (files.length !== 4) {
       toast.error('Please upload 3 images and 1 video', {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -80,7 +80,7 @@ const closeModal = () => {
     if (imageFiles.length !== 3 || videoFiles.length !== 1) {
         toast.error('Please upload 3 images and 1 video', {
           position: "top-right",
-          autoClose: 5000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -108,7 +108,7 @@ const closeModal = () => {
 
         toast.success('Success!', {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -124,7 +124,7 @@ const closeModal = () => {
       } else {
         toast.error('Failed. Server Error!', {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -137,7 +137,7 @@ const closeModal = () => {
       console.error('Error uploading files:', error);
       toast.error('Failed. Server Error!', {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -153,35 +153,35 @@ const closeModal = () => {
         <ToastContainer />
         <SimpleNavigationBar />
 
-        <p className='text-center text-blue-500 mt-10 text-2xl font-bold'>Upload At least 3 images and 1 video of your previous campaigns to get approved</p>
+        <p className='text-center text-blue-500 mt-10 text-md font-bold'>Upload At least 3 images and 1 video of your previous campaigns to get approved</p>
 
     <div
     {...getRootProps()}
-    className="border-dashed border-2 border-gray-300 bg-neutral-900 p-10 mx-10 lg:mx-32 rounded-lg mt-10 mb-10"
+    className="border-dashed border-2 border-gray-300 bg-neutral-900 p-10 mx-10 lg:mx-32 rounded-lg mt-5 mb-10"
     >
         <input {...getInputProps()} />
-        <p className="text-center text-white my-5">Drag & drop images and videos here, or click to select files</p>
+        <p className="text-center text-white my-5 text-sm">Drag & drop images and videos here, or click to select files</p>
     </div>
     <div className='flex justify-center mb-5 '>
         <button onClick={e => {
             e.preventDefault();
             handleSubmit();
         }} 
-        className='p-2 text-white bg-blue-600 rounded-xl'
+        className='p-2 text-white bg-blue-600 rounded-lg text-sm'
         >
             Submit Media
         </button>
     </div>
     
 
-      <div className="flex flex-wrap gap-10 mx-10 lg:mx-32 justify-center mb-10">
+      <div className="flex flex-wrap gap-5 mx-5 lg:mx-20 justify-center mb-10">
         {files.map((file, index) => (
-          <div key={index} className="bg-zinc-950 border border-gray-900 shadow-2xl rounded-2xl p-4 w-full lg:w-1/4">
+          <div key={index} className="bg-zinc-800 border border-gray-900 shadow-2xl rounded-xl p-4 w-full lg:w-1/4">
             {file.type.startsWith('image') ? (
               <img
                 src={URL.createObjectURL(file)}
                 alt={`Preview ${index}`}
-                className="object-cover cursor-pointer"
+                className="object-contain cursor-pointer h-44"
                 onClick={() => openModal(URL.createObjectURL(file))}
               />
             ) : file.type.startsWith('video') ? (
@@ -189,14 +189,14 @@ const closeModal = () => {
                 url={URL.createObjectURL(file)}
                 controls
                 width="100%"
-                height="300px"
+                height="200px"
               />
             ) : (
               <div>Unsupported file type</div>
             )}
             <button
               onClick={() => handleFileDelete(index)}
-              className="mt-2 w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600"
+              className="text-sm mt-2 w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600"
             >
               Delete
             </button>
@@ -209,7 +209,7 @@ const closeModal = () => {
             e.preventDefault();
             handleSubmit();
         }} 
-        className='p-2 text-white bg-blue-600 rounded-xl'
+        className='p-2 text-white bg-blue-600 rounded-lg text-sm'
         >
             Submit Media
         </button>
